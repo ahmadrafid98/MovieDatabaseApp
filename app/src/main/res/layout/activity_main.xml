@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/images1"
+        android:layout_above="@+id/text1"
+        android:layout_centerHorizontal="true"
+        android:layout_width="282dp"
+        android:layout_height="121dp"
+        android:layout_marginBottom="8dp"
+        app:srcCompat="@drawable/images"/>
+
+    <TextView
+        android:textColor="#000"
+        android:id="@+id/text1"
+        android:textSize="20sp"
+        android:layout_above="@+id/linear_layout1"
+        android:layout_centerHorizontal="true"
+        android:text="Find Your Favourite Movie"
+        android:layout_marginBottom="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/linear_layout1"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center"
+                android:layout_above="@+id/search"
+                android:id="@+id/search_field"
+                android:layout_width="230dp"
+                android:hint="Search"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:background="@drawable/custom_button"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:id="@+id/search"
+                android:textSize="17sp"
+                android:text="Search"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:onClick="search"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="145dp"
+            android:layout_below="@+id/linear_layout1"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:background="@drawable/custom_button"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:id="@+id/author"
+                android:textSize="17sp"
+                android:text="Author"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:onClick="author"/>
+
+            <Button
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/custom_button"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:layout_below="@+id/author"
+                android:id="@+id/contact"
+                android:textSize="17sp"
+                android:text="Contact Us"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:onClick="contactUs"/>
+
+        </LinearLayout>
+
+</RelativeLayout>
